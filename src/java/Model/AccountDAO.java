@@ -7,7 +7,10 @@ package Model;
 
 import java.sql.ResultSet;
 import Entity.Account;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author Admin
@@ -31,10 +34,26 @@ public class AccountDAO extends ConnectDB {
         }
         return a;
     }
+    public int ChangePassword(String usename,String pass) {
+        String sql = "UPDATE Account\n" +
+           "SET password = ?\n" +
+               "WHERE username = ?";
+        int n=0;
+               
+        try {
+            PreparedStatement pre =conn.prepareStatement(sql);
+            pre.setString(1, pass);
+            pre.setString(2, usename); 
+            n=pre.executeUpdate();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return n;
+    }
     
     public static void main(String[] args) {
         AccountDAO dao=new AccountDAO();
-        Account a=dao.getAccount("use1", "12345678");
+        Account a=dao.getAccount("user1", "12345678");
         System.out.println(a);
     }
 }

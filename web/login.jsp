@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script
             src="https://kit.fontawesome.com/64d58efce2.js"
-            crossorigin="anonymous"
+            crossorigin="anonymous" 
         ></script>
         <link rel="stylesheet" href="smart.css" />
         <title>Sign in & Sign up Form</title>
@@ -33,7 +33,7 @@
                             <input type="password" name="password" placeholder="Password" value="">
                         </div>
                        <div>
-                                <a href="#" style="text-decoration: none; margin-left: -170px" class="">
+                                <a href="index.html" style="text-decoration: none; margin-left: -170px" class="">
                             <i class="fas fa-lock"></i>
                             Forgot Password</a>
                         </div>

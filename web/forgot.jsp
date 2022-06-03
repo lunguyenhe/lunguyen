@@ -4,16 +4,17 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
     <head>
         <title>User Email Verification</title>
         <meta charset="UTF-8">
-        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             h1{
                 text-align: center;
-                color: blueviolet;
+                color: blue;
                 padding-top: 30px;
             }
             form{
@@ -40,7 +41,9 @@ and open the template in the editor.
             }
         </style>
     </head>
+    
     <body>
+        
         <h1>User Email Verification</h1>
         <form action="forgot" method="post">
             <label>User Name</label>
